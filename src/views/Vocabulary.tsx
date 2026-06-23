@@ -62,9 +62,16 @@ export default function Vocabulary() {
       </div>
 
       <div 
-        onClick={() => setShowTranslation(!showTranslation)}
-        className="w-full max-w-sm aspect-square bg-[#0057B7] rounded-[32px] shadow-xl shadow-blue-200 dark:shadow-none relative overflow-hidden flex items-center justify-center flex-col p-8 text-center cursor-pointer active:scale-95 transition-transform"
-      >
+  onClick={() => {
+    // 1. Додаємо вібрацію (Impact)
+    // Telegram Mini App підтримує різні типи: 'light', 'medium', 'heavy', 'rigid', 'soft'
+    window.Telegram?.WebApp?.HapticFeedback?.impactOccurred('light');
+    
+    // 2. Перемикаємо переклад
+    setShowTranslation(!showTranslation);
+  }}
+  className="w-full max-w-sm aspect-square bg-[#0057B7] rounded-[32px] ... cursor-pointer active:scale-95 transition-transform"
+>
         <div className="absolute -right-4 -bottom-4 w-32 h-32 bg-white opacity-5 rounded-full"></div>
         {!showTranslation ? (
           <>

@@ -11,6 +11,7 @@ interface AuthContextType {
   user: any | null;
   loading: boolean;
   initData: string | null;
+  getToken: () => string | null; // Додай цей рядок
 }
 
 const AuthContext = createContext<AuthContextType>({
