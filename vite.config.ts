@@ -7,10 +7,10 @@ export default defineConfig(() => {
   return {
     plugins: [react(), tailwindcss()],
     resolve: {
-      alias: {
-        '@': path.resolve(__dirname, '.'),
-      },
-    },
+  alias: {
+    '@': path.resolve(__dirname, './src'), // Тепер @ чітко вказує на папку src
+  },
+},
     server: {
       // HMR is disabled in AI Studio via DISABLE_HMR env var.
       // Do not modifyâfile watching is disabled to prevent flickering during agent edits.

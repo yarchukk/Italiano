@@ -12,9 +12,9 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+   "paths": {
+  "@/*": ["./src/*"]
+}
   },
   "include": ["src", "vite-env.d.ts"]
 }
