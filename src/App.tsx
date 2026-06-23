@@ -6,7 +6,7 @@ import Home from "./views/Home";
 import Vocabulary from "./views/Vocabulary";
 import Phrases from "./views/Phrases";
 import Profile from "./views/Profile";
-import { BottomNav } from "c:/Users/arcuk/Desktop/italianoOra/src/components/BottomNav";
+import { BottomNav } from "./components/BottomNav";
 
 // Компонент для захищених маршрутів
 function PrivateRoute({ children }: { children: ReactNode }) {
